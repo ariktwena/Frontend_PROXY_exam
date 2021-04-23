@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#/usr/bin/env bash
 
 XXXX="codeops/html"
 DROPLET_URL="161.35.220.48"
