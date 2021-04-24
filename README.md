@@ -103,9 +103,5 @@ Give a ⭐️ if this project helped you!
 
 Feel free to fork this project and make your changes.
 
-## 📝 License
-
-This project is [MIT](LICENSE) licensed.
-
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
