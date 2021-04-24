@@ -21,7 +21,8 @@ export default function Header({ isLoggedIn, loginMsg }) {
           <NavLink exact activeClassName="active" to="/">
             Home
           </NavLink>
-        </li>{" "}
+        </li>
+
         {isLoggedIn === false ? (
           ""
         ) : (
