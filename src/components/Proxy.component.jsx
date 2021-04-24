@@ -14,6 +14,7 @@ import Country from "./Country.component";
 import AllPersonProxy from "./AllPersonProxy.componen";
 import AddPersonProxy from "./AddPersonProxy.component";
 import EditPersonProxy from "./EditPersonProxy.component";
+import Jokes from "./Jokes.component";
 
 const Proxy = (props) => {
   const { facade } = props;
@@ -38,6 +39,11 @@ const Proxy = (props) => {
           <li>
             <NavLink activeClassName="active" to="/find-country">
               Find Country
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName="active" to="/jokes">
+              Jokes
             </NavLink>
           </li>
           <li>
@@ -66,6 +72,9 @@ const Proxy = (props) => {
           </Route>
           <Route path="/find-country">
             <Country facade={facade} />
+          </Route>
+          <Route path="/jokes">
+            <Jokes facade={facade} />
           </Route>
           <Route path="/person-proxy">
             <AllPersonProxy facade={facade} />

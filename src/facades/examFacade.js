@@ -72,6 +72,10 @@ function apiFacade() {
     );
   }
 
+  function getJokesProxy(callback) {
+    utils.fetchAny(SERVER_URL + "/api/proxy/jokes", callback);
+  }
+
   return {
     getPersons,
     getMapsNoDTO,
@@ -87,6 +91,7 @@ function apiFacade() {
     addPersonRest,
     getPersonRest,
     editPersonRest,
+    getJokesProxy,
   };
 }
 const facade = apiFacade();

@@ -12,6 +12,7 @@ const ProxyHome = () => {
             <br />
             <p>Parallel: Fetch data from 5 URL's simultaneously without DTO</p>
             <p>Find Country: Fetch a country through countrycode without DTO</p>
+            <p>Jokes: Fetch data from to different Joke Api's with different output</p>
             <p>
               All Persons: Fetch all data from remote proxy, and delete Persons
             </p>
