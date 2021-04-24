@@ -1,3 +1,15 @@
+<h1 align="center">Welcome to 3 Semester Spring 2021 - Exam 👋</h1>
+
+<center>Course assignment 3 for 3. Semester of Spring 2021 </center>
+
+## Author
+
+👤 **Sigurd Arik Gaarde Nielsen**
+
+* [Github](https://github.com/ariktwena)
+* [LinkedIn](https://www.linkedin.com/in/arik-gaarde-nielsen-3a54255/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -5,6 +17,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm intall`
+
+Installs all the dependencies.
+
+### `npm audit fix --force`
+
+Any issues with dependencies can usually be fixed by running this command.
 
 ### `npm start`
 
@@ -39,6 +59,12 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Files that can/should be changed
+
+* The file settings.js holds URLs for fetching. 
+* The file examFacade.js handles fetches to the backend
+* The file Home.component.jsx is the welcome page
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -68,3 +94,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## Contributing
+
+Feel free to fork this project and make your changes.
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
