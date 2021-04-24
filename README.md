@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to 3 Semester Spring 2021 - Exam 👋</h1>
 
-<center>Course assignment 3 for 3. Semester of Spring 2021 </center>
+<center>Exam for 3. Semester of Spring 2021 </center>
 
 ## Author
 
@@ -11,15 +11,15 @@
 
 # Deployed project
 
-#### [FrontEnd](https://codeops.dk/)
+#### 🖥 [FrontEnd](https://codeops.dk/)
 
-#### [BackEnd](https://codergram.dk/startcode_exam/)
+#### 💾 [BackEnd](https://codergram.dk/startcode_exam/)
 
-#### [GitHub FrontEnd](https://github.com/ariktwena/Frontend_PROXY_exam)
+#### 🖥 [GitHub FrontEnd](https://github.com/ariktwena/Frontend_PROXY_exam)
 
-#### [GitHub BackEnd](https://github.com/ariktwena/BackEnd_PROXY_Exam)
+#### 💾 [GitHub BackEnd](https://github.com/ariktwena/BackEnd_PROXY_Exam)
 
-#### [Travis](https://www.travis-ci.com/github/ariktwena/BackEnd_PROXY_Exam)
+#### 👮🏽‍♂️ [Travis](https://www.travis-ci.com/github/ariktwena/BackEnd_PROXY_Exam)
 
 
 # Getting Started with Create React App
