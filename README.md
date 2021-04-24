@@ -9,6 +9,18 @@
 * [Github](https://github.com/ariktwena)
 * [LinkedIn](https://www.linkedin.com/in/arik-gaarde-nielsen-3a54255/)
 
+# Deployed project
+
+#### [FrontEnd](https://codeops.dk/)
+
+#### [BackEnd](https://codergram.dk/startcode_exam/)
+
+#### [GitHub FrontEnd](https://github.com/ariktwena/Frontend_PROXY_exam)
+
+#### [GitHub BackEnd](https://github.com/ariktwena/BackEnd_PROXY_Exam)
+
+#### [Travis](https://www.travis-ci.com/github/ariktwena/BackEnd_PROXY_Exam)
+
 
 # Getting Started with Create React App
 
