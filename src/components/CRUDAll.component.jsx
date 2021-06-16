@@ -5,16 +5,10 @@ export default function CRUDAll(props) {
   const { dogs, editDog, deleteDog } = props;
 
   const editSelectedDog = (event) => {
-    // console.log(event.target.id);
-    // let bookToEdit = books.find(
-    //   (book) => book.id === parseInt(event.target.id)
-    // );
-    // //console.log(bookToEdit);
     editDog(parseInt(event.target.id));
   };
 
   const deleteSelectedDog = (event) => {
-    // console.log(event.target.id);
     deleteDog(parseInt(event.target.id));
   };
 

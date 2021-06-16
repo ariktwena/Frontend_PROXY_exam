@@ -86,10 +86,6 @@ export default function CRUD(props) {
     // setBookToAddEdit({ ...emptyBook });
     const theDog = dogs.find((d) => d.id === id);
     setDogToAddEdit({ ...theDog });
-    // facade.getBooksById(id, (data) => {
-    //   document.getElementById("errorMsg").style.display = "none";
-    // console.log(data);
-    //   setBookToAddEdit({ ...data });
     document.getElementById("id").value = theDog.id;
     document.getElementById("name").value = theDog.name;
     document.getElementById("bredd").value = theDog.breed;
@@ -106,10 +102,7 @@ export default function CRUD(props) {
     document.getElementById("walkerPhone").value = theDog.walkers[0].phone;
 
     setFetchData(!fetchData);
-    // });
-    //Call thisfrom the AllPerson control with the  person to edit
-    //Set the state variable personToAddEdit with this person (a clone) to make the new value flow down via props
-    //console.log(book);
+
   };
 
   //   const getBook = (book) => {
@@ -165,9 +158,6 @@ export default function CRUD(props) {
             dogId={dogToAddEdit.id}
             cancelButton={cancelButton}
             editDog={editDog}
-            // facade={facade}
-            // fetchData={fetchData}
-            // libraryData={libraryData}
           />
         </div>
       </div>

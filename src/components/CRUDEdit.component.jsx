@@ -30,22 +30,10 @@ export default function CRUDEdit(props) {
 
   const [dog, setDog] = useState({ ...emptyDog });
 
-  //   useEffect(() => {
-  //     console.log(book);
-  //     console.log(bookToAddEdit);
-  //     setBook({ ...bookToAddEdit });
-  //     console.log(book);
-  //   }, []);
-
   useEffect(() => {
     console.log(dogId);
     setDog({ ...dogToAddEdit });
     console.log(dog);
-    // facade.getBooksById(bookId, (data) => {
-    //     document.getElementById("errorMsg").style.display = "none";
-    //     // console.log(data);
-    //     setBook({ ...data });
-    //   });
   }, [dogToAddEdit]);
 
   const handleChange = (event) => {
@@ -83,15 +71,6 @@ export default function CRUDEdit(props) {
       dog[name] = value;
       setDog({ ...dog, [name]: value });
     }
-
-    // if (name === "name") {
-    //   dog.library[name] = value;
-    //   setDog({ ...dog, [name]: value });
-    // } else {
-    //     dog[name] = value;
-    //     setDog({ ...dog, [name]: value });
-    // }
-
     console.log(dog);
   };
 
@@ -116,11 +95,6 @@ export default function CRUDEdit(props) {
 
   return (
     <div>
-      {/* {console.log(bookId)} */}
-      {/* {console.log(bookToAddEdit)} */}
-      {/* {console.log("BOB:")} */}
-      {console.log(dog)}
-      {console.log(dog.id)}
       <form
         className="form-horizontal"
         onSubmit={handleSubmit}
