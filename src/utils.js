@@ -1,3 +1,4 @@
+import jwt_decode from "jwt-decode";
 import { SERVER_URL } from "./settings";
 
 function handleHttpErrors(res) {
@@ -81,6 +82,14 @@ function apiUtils() {
   }
 
   const setToken = (token) => {
+    const tokenData = jwt_decode(token);
+    console.log(tokenData);
+    localStorage.setItem("role", tokenData.roles);
+    // if (localStorage.getItem("role") === "admin") {
+    //   console.log("YES");
+    // } else {
+    //   console.log("NO");
+    // }
     localStorage.setItem("jwtToken", token);
   };
 
@@ -95,6 +104,7 @@ function apiUtils() {
 
   const logout = () => {
     localStorage.removeItem("jwtToken");
+    localStorage.removeItem("role");
   };
 
   return {

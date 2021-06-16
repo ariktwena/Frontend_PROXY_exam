@@ -11,10 +11,11 @@ const RestHome = () => {
             <h3 className="text-center">Rest</h3>
             <br />
             <p>
-              All Persons: Fetch all data from Rest Api, and delete Persons
+              List of Walkers: Få et overblik over alle walkers
             </p>
-            <p>Add Person: Add new Person through Rest Api connection</p>
-            <p>Edit Person: Edit existing Person through Rest Api connection</p>
+            <p>Dogs by Owner: Find de hunde som en ejer har via ejer-id</p>
+            <p>Walker by Dog: Find de Walker som en hund har</p>
+            <p>CRUD: Opret, ændre eller slet en hund. Owner og Walker har unikke tlf. nr. Når man opretter en ny, hvis man ændre deres nr :)</p>
           </div>
           <div className="col-md-1"></div>
         </div>

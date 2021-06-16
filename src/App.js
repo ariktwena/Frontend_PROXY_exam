@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   // BrowserRouter as Router,
   Switch,
@@ -25,8 +25,10 @@ import "./App.css";
 function App(props) {
   const { facade, utils } = props;
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [displayError, setDisplayError] = useState("");
   let history = useHistory();
+
 
   const setLoginStatus = (status, pageToGoTo) => {
     // console.log(pageToGoTo)
@@ -44,9 +46,17 @@ function App(props) {
     utils
       .login(user, pass)
       .then((res) => {
+        const role = localStorage.getItem("role");
+        if (role === "admin") {
+          console.log("YES");
+          setIsAdmin(true);
+        } else {
+          console.log("NO");
+          setIsAdmin(false);
+        }
         setLoginStatus(true, from);
-        //setIsLoggedIn(true);
-        setDisplayError("");
+        // setIsLoggedIn(true);
+        setDisplayError("");  
       })
       .catch((error) => {
         error.fullError.then((errorMsg) => {
@@ -67,10 +77,12 @@ function App(props) {
 
   return (
     <div>
+      {console.log(isAdmin)}
       {/* {console.log(props.bookFacade.getBooks)} */}
       <Header
         loginMsg={isLoggedIn ? "Logout" : "Login"}
         isLoggedIn={isLoggedIn}
+        isAdmin={isAdmin}
       />
       <Switch>
         <Route exact path="/">
@@ -87,7 +99,7 @@ function App(props) {
           facade={facade}
         /> */}
         <Route path="/rest">
-          <Rest facade={facade} />
+          <Rest facade={facade} isAdmin={isAdmin} />
         </Route>
         {/* <PrivateRoute
           path="/rest"

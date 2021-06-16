@@ -27,11 +27,11 @@ export default function Header({ isLoggedIn, loginMsg }) {
           ""
         ) : (
           <React.Fragment>
-            <li>
+            {/* <li>
               <NavLink activeClassName="active" to="/proxy">
                 Proxy
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink activeClassName="active" to="/rest">
                 Rest
