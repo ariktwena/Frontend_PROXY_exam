@@ -35,7 +35,7 @@ export default function CRUDAll(props) {
               <td>{dog.id}</td>
               <td>{dog.name}</td>
               <td>{dog.breed}</td>
-              {dog.gander === "M" ? <td>Male</td> : <td>Female</td>}
+              {dog.gender === "M" ? <td>Male</td> : <td>Female</td>}
               <td><img src={dog.image} alt="doog" width="30" height="30"></img></td>
               <td>{dog.birthdate.day}-{dog.birthdate.month}-{dog.birthdate.year}</td>
               <td>{dog.walkers.length}</td>
