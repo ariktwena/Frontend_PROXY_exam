@@ -11,12 +11,12 @@ export default function Home(props) {
             <h3 className="text-center">3. Semester eksamen :D</h3>
             <br />
             <p>
-              List of Walkers: Få et overblik over alle walkers
+            Rest -> List of Walkers: Få et overblik over alle walkers
             </p>
-            <p>Dogs by Owner: Find de hunde som en ejer har via ejer-id</p>
-            <p>Walker by Dog: Find de Walker som en hund har</p>
-            <p>CRUD: Opret, ændre eller slet en hund. Owner og Walker har unikke tlf. nr. Når man opretter en ny, hvis man ændre deres nr :)</p>
-            <p>Connect: Forbind en hund med dens nye ejer</p>
+            <p>Rest -> Dogs by Owner: Find de hunde som en ejer har via ejer-id</p>
+            <p>Rest -> Walker by Dog: Find de Walker som en hund har</p>
+            <p>Rest -> CRUD: Opret, ændre eller slet en hund. Owner og Walker har unikke tlf. nr. Når man opretter en ny, hvis man ændre deres nr :)</p>
+            <p>Rest -> Connect: Forbind en hund med dens nye ejer</p>
           </div>
           <div className="col-md-1"></div>
         </div>

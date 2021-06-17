@@ -78,8 +78,7 @@ export default function CRUDEdit(props) {
     event.preventDefault();
     console.log(dog);
     if (dog.gender === "") {
-      document.getElementById("errorForm").innerHTML =
-        "Please choose a gender";
+      document.getElementById("errorForm").innerHTML = "Please choose a gender";
       setTimeout(function () {
         document.getElementById("errorForm").innerHTML = "";
       }, 2500);
@@ -112,21 +111,40 @@ export default function CRUDEdit(props) {
             />
           </div>
         </div>
-        <div className="form-group">
-          <label className="control-label col-sm-3" htmlFor="name">
-            Dog Name:
-          </label>
-          <div className="col-sm-9">
-            <input
-              className="form-control"
-              name="name"
-              id="name"
-              placeholder="Enter Dog Name"
-              defaultValue={dog.name}
-              required
-            />
+        {dogId !== "" ? (
+          <div className="form-group">
+            <label className="control-label col-sm-3" htmlFor="name">
+              Dog Name:
+            </label>
+            <div className="col-sm-9">
+              <input
+                readOnly
+                className="form-control"
+                name="name"
+                id="name"
+                placeholder="Enter Dog Name"
+                defaultValue={dog.name}
+                required
+              />
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="form-group">
+            <label className="control-label col-sm-3" htmlFor="name">
+              Dog Name:
+            </label>
+            <div className="col-sm-9">
+              <input
+                className="form-control"
+                name="name"
+                id="name"
+                placeholder="Enter Dog Name"
+                defaultValue={dog.name}
+                required
+              />
+            </div>
+          </div>
+        )}
         <div className="form-group">
           <label className="control-label col-sm-3" htmlFor="name">
             Dog Breed:

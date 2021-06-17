@@ -69,7 +69,7 @@ export default function WalkerByDog(props) {
             <div className="form-group">
           <div className="col-sm-offset-3 col-sm-9">
             <button type="submit" className="btn btn-primary">
-              Find Dogs
+              Find Walkers
             </button>
           </div>
         </div>
