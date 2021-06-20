@@ -82,6 +82,53 @@ export default function CRUDEdit(props) {
       setTimeout(function () {
         document.getElementById("errorForm").innerHTML = "";
       }, 2500);
+    } else if (
+      dog.birthdate.day > 30 &&
+      (dog.birthdate.month === 4 ||
+        dog.birthdate.month === 6 ||
+        dog.birthdate.month === 9 ||
+        dog.birthdate.month === 11)
+    ) {
+      document.getElementById("day").value = 30;
+      dog.birthdate.day = 30;
+      document.getElementById("errorForm").innerHTML =
+        "There are not that many days in the month. Day set to the 30th";
+      setTimeout(function () {
+        document.getElementById("errorForm").innerHTML = "";
+      }, 2500);
+    } else if (dog.birthdate.day > 29 && dog.birthdate.month === 2) {
+      if (checkLeapYear(dog.birthdate.year)) {
+        console.log("Leap Year");
+        document.getElementById("day").value = 29;
+        dog.birthdate.day = 29;
+        document.getElementById("errorForm").innerHTML =
+          "There are not that many days in the month. Day set to the 29th";
+        setTimeout(function () {
+          document.getElementById("errorForm").innerHTML = "";
+        }, 2500);
+      } else {
+        console.log("Not Leap Year");
+        document.getElementById("day").value = 28;
+        dog.birthdate.day = 28;
+        document.getElementById("errorForm").innerHTML =
+          "There are not that many days in the month. Day set to the 28th";
+        setTimeout(function () {
+          document.getElementById("errorForm").innerHTML = "";
+        }, 2500);
+      }
+    } else if (
+      dog.birthdate.day > 28 &&
+      dog.birthdate.month === 2 &&
+      !checkLeapYear(dog.birthdate.year)
+    ) {
+      console.log("Not Leap Year");
+      document.getElementById("day").value = 28;
+      dog.birthdate.day = 28;
+      document.getElementById("errorForm").innerHTML =
+        "There are not that many days in the month. Day set to the 28th";
+      setTimeout(function () {
+        document.getElementById("errorForm").innerHTML = "";
+      }, 2500);
     } else {
       storeAddEditDog(dog);
       cancelButton();
@@ -90,6 +137,10 @@ export default function CRUDEdit(props) {
 
   const cancel = () => {
     cancelButton();
+  };
+
+  const checkLeapYear = (year) => {
+    return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
   };
 
   return (
@@ -111,7 +162,22 @@ export default function CRUDEdit(props) {
             />
           </div>
         </div>
-        {dogId !== "" ? (
+        <div className="form-group">
+            <label className="control-label col-sm-3" htmlFor="name">
+              Dog Name:
+            </label>
+            <div className="col-sm-9">
+              <input
+                className="form-control"
+                name="name"
+                id="name"
+                placeholder="Enter Dog Name"
+                defaultValue={dog.name}
+                required
+              />
+            </div>
+          </div>
+        {/* {dogId !== "" ? (
           <div className="form-group">
             <label className="control-label col-sm-3" htmlFor="name">
               Dog Name:
@@ -144,7 +210,7 @@ export default function CRUDEdit(props) {
               />
             </div>
           </div>
-        )}
+        )} */}
         <div className="form-group">
           <label className="control-label col-sm-3" htmlFor="name">
             Dog Breed:
@@ -160,30 +226,55 @@ export default function CRUDEdit(props) {
             />
           </div>
         </div>
-        <div className="form-group">
-          <label className="control-label col-sm-3" htmlFor="name">
-            Gender:
-          </label>
-          <div className="col-sm-9">
-            <select className="form-control" name="gender" id="gender" required>
-              {dog.gender === "F" ? (
-                <React.Fragment>
-                  <option value="M">Male</option>
-                  <option value="F" selected>
-                    Female
-                  </option>
-                </React.Fragment>
-              ) : (
-                <React.Fragment>
-                  <option value="M" selected>
-                    Male
-                  </option>
-                  <option value="F">Female</option>
-                </React.Fragment>
-              )}
-            </select>
+        {dogId !== "" ? (
+          <div className="form-group">
+            <label className="control-label col-sm-3" htmlFor="name">
+              Gender:
+            </label>
+            <div className="col-sm-9">
+              <select
+                className="form-control"
+                name="gender"
+                id="gender"
+                required
+              >
+                {dog.gender === "F" ? (
+                  <React.Fragment>
+                    <option value="M">Male</option>
+                    <option value="F" selected>
+                      Female
+                    </option>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <option value="M" selected>
+                      Male
+                    </option>
+                    <option value="F">Female</option>
+                  </React.Fragment>
+                )}
+              </select>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="form-group">
+            <label className="control-label col-sm-3" htmlFor="name">
+              Gender:
+            </label>
+            <div className="col-sm-9">
+              <select
+                className="form-control"
+                name="gender"
+                id="gender"
+                required
+              >
+                <option value="">Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div>
+        )}
         <div className="form-group">
           <label className="control-label col-sm-3" htmlFor="name">
             Birthdate:
